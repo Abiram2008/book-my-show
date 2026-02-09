@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select Seats</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Select Show & Seats</header>
+
+<div class="container">
+
+<h3 id="timer">05:00</h3>
+
+<input type="date" id="date">
+
+<select id="time">
+<option>10:00 AM</option>
+<option>1:30 PM</option>
+<option>5:00 PM</option>
+<option>9:00 PM</option>
+</select>
+
+<select id="theater">
+<option>Vetri Theatre</option>
+<option>Senthil Theatre</option>
+<option>Saravana Cinema</option>
+<option>APS Theatre</option>
+</select>
+
+<div id="seating"></div>
+
+<div class="screen">SCREEN</div>
+
+</div>
+
+<!-- Bottom bar -->
+<div class="bottom-bar">
+<span id="seatCount">Seats: 0</span>
+<span id="totalAmount">Total: ₹0</span>
+<button onclick="goPayment()">Proceed Payment</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

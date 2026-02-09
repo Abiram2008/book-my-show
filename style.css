@@ -1,0 +1,294 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f2f2f2;
+}
+
+/* HEADER */
+
+header{
+background:#e11c2a;
+color:white;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+}
+
+/* CONTAINER */
+
+.container{
+padding:20px;
+}
+
+/* MOVIE PAGE */
+
+.movie-card{
+display:flex;
+background:white;
+border-radius:12px;
+margin-bottom:20px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.movie-card img{
+width:50%;
+aspect-ratio:16/9;
+object-fit:cover;
+}
+
+.movie-details{
+padding:15px;
+width:50%;
+}
+
+.movie-details h2{
+color:#e11c2a;
+margin:0 0 6px;
+}
+
+.tag{
+background:#e11c2a;
+color:white;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+margin-right:5px;
+}
+
+/* FORM INPUTS */
+
+.container select,
+.container input,
+.container input[type="date"]{
+max-width:300px;
+margin:10px auto;
+display:block;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+/* BUTTONS */
+
+button{
+background:#e11c2a;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+width:100%;
+max-width:300px;
+margin:10px auto;
+display:block;
+}
+
+button:hover{
+opacity:.9;
+}
+
+/* SEAT LAYOUT */
+
+#seating{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:5px;
+margin-top:10px;
+padding-bottom:100px;
+}
+
+.row{
+display:flex;
+align-items:center;
+gap:4px;
+}
+
+.row-label{
+width:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+.block{display:flex;gap:4px;}
+.gap{width:30px;}
+
+/* SEATS */
+
+.seat{
+width:20px;
+height:20px;
+font-size:8px;
+border-radius:4px;
+border:1px solid #333;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+.free{background:#2ecc71;color:white;}
+.booked{background:#e74c3c;color:white;}
+.selected{background:#f1c40f;color:black;}
+
+/* SCREEN */
+
+.screen{
+margin:25px auto;
+width:70%;
+padding:8px;
+border-radius:0 0 80px 80px;
+border:3px solid #e11c2a;
+text-align:center;
+font-weight:bold;
+background:#fff;
+}
+
+/* TIMER */
+
+#timer{
+text-align:center;
+font-size:22px;
+font-weight:bold;
+color:#e11c2a;
+margin-bottom:10px;
+}
+
+/* BOTTOM TOTAL BAR */
+
+.bottom-bar{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#1c1c1c;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+font-size:16px;
+box-shadow:0 -3px 10px rgba(0,0,0,.3);
+z-index:1000;
+}
+
+.bottom-bar button{
+background:#e11c2a;
+padding:10px 18px;
+font-size:14px;
+border-radius:6px;
+width:auto;
+margin:0;
+}
+
+/* PAYMENT & BASIC CARD */
+
+.card,
+.payment-card{
+background:white;
+padding:22px;
+border-radius:14px;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+max-width:420px;
+margin:40px auto;
+text-align:center;
+}
+
+/* PAYMENT OPTIONS */
+
+.pay-option{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px 15px;
+margin:8px 0;
+border:2px solid #ddd;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+font-size:15px;
+}
+
+.pay-option:hover{
+border-color:#e11c2a;
+background:#ffeaea;
+}
+
+.pay-option.selected{
+background:#e11c2a;
+color:white;
+border-color:#e11c2a;
+}
+
+#selectedMethod{
+margin:15px 0;
+font-size:16px;
+}
+
+/* 🎫 TICKET (BILL PAGE) */
+
+.ticket-box{
+background:linear-gradient(135deg,#ffffff,#ff3d3d);
+color:rgb(0, 0, 0);
+padding:26px;
+border-radius:18px;
+max-width:380px;
+margin:30px auto;
+text-align:center;
+box-shadow:0 6px 16px rgba(0,0,0,.3);
+}
+
+.ticket-box h2{
+margin-bottom:14px;
+letter-spacing:1px;
+}
+
+.ticket-box p{
+margin:6px 0;
+font-size:15px;
+}
+
+.ticket-box hr{
+border:1px dashed rgba(255,255,255,.6);
+margin:12px 0;
+}
+
+.ticket-id{
+font-size:17px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.movie-card{
+flex-direction:column;
+}
+
+.movie-card img,
+.movie-details{
+width:100%;
+}
+
+.seat{
+width:16px;
+height:16px;
+font-size:6px;
+}
+
+.bottom-bar{
+flex-direction:column;
+gap:8px;
+text-align:center;
+}
+
+.bottom-bar span{
+display:block;
+}
+}
